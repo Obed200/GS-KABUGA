@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> G.S SAINT ANTOINE </title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <!-- <header>
+        <div class="containerM">
+            <div class="incM">
+            <div class="logo-image">
+                <img src="images/kab1.jpg" alt="logo-image" class="logo-imageM">
+            </div>
+            <div class="logoM"> G.S SAINT ANTOINE </div>
+        </div>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="admission.html">Admissions</a></li>
+                    <li><a href="academic.html">Academics</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        </div>
+    </header> -->
+
+    <header>
+        <div class="containerM">
+            <div class="incM">
+                <div class="logo-image">
+                    <img src="images/kab1.jpg" alt="logo-image" class="logo-imageM">
+                </div>
+                <div class="logoM">G.S SAINT ANTOINE</div>
+            </div>
+            <span class="menu-toggle">&#9776;</span>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="admission.html">Admissions</a></li>
+                    <li><a href="academic.html">Academics</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('nav ul');
+    
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+        });
+    </script>
+
+    <!-- Hero Section -->
+    <!-- <section class="hero">
+        <div class="hero-slider">
+            <div class="slide" style="background-image: url('images/slide1.jpg');">
+                <h1>Welcome to GS KABUGA</h1>
+                <p>Empowering students for a bright future.</p>
+            </div>
+            <div class="slide" style="background-image: url('images/slide2.jpg');">
+                <h1>Quality Education</h1>
+                <p>Fostering academic excellence.</p>
+            </div>
+            <div class="slide" style="background-image: url('images/slide3.jpg');">
+                <h1>Building Leaders</h1>
+                <p>Shaping the future generation.</p>
+            </div>
+        </div>
+        <div class="navigation">
+            <span class="prev">&#10094;</span>
+            <span class="next">&#10095;</span>
+        </div>
+    </section> -->
+
+
+<!-- 
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="slide" style="background-image: url('images/slide1.jpg');">
+                <h1>Welcome to G.S SAINT ANTOINE </h1>
+                <p>Empowering students for a bright future.</p>
+            </div>
+            <div class="slide" style="background-image: url('images/slide2.jpg');">
+                <h1>Quality Education</h1>
+                <p>Fostering academic excellence.</p>
+            </div>
+            <div class="slide" style="background-image: url('images/slide3.jpg');">
+                <h1>Building Leaders</h1>
+                <p>Shaping the future generation.</p>
+            </div>
+        </div>
+        <div class="navigation">
+            <span class="prev">&#10094;</span>
+            <span class="next">&#10095;</span>
+        </div>
+    </section> -->
+
+
+    <section class="heroM">
+        <div class="hero-sliderM">
+            <div class="slideM active" style="background-image: url('images/slide1.jpg');">
+                <div class="contentM">
+                    <h1>Welcome to G.S SAINT ANTOINE</h1>
+                    <p>Empowering students for a bright future.</p>
+                </div>
+            </div>
+            <div class="slideM" style="background-image: url('images/slide2.jpg');">
+                <div class="contentM">
+                    <h1>Quality Education</h1>
+                    <p>Fostering academic excellence.</p>
+                </div>
+            </div>
+            <div class="slideM" style="background-image: url('images/slide3.jpg');">
+                <div class="contentM">
+                    <h1>Building Leaders</h1>
+                    <p>Shaping the future generation.</p>
+                </div>
+            </div>
+        </div>
+        <div class="navigationM">
+            <span class="prevM">&#10094;</span>
+            <span class="nextM">&#10095;</span>
+        </div>
+    </section>
+
+
+    <script>
+        const slides = document.querySelectorAll('.slideM');
+        const prevBtn = document.querySelector('.prevM');
+        const nextBtn = document.querySelector('.nextM');
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        // Event listeners for navigation buttons
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+
+        // Automatic slideshow
+        setInterval(nextSlide, 4000); // Change slide every 2 seconds
+
+        // Initialize the first slide
+        showSlide(currentIndex);
+    </script>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 G.S SAINT ANTOINE . All rights reserved.</p>
+            <p>&trade; Government School.</p>
+
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
